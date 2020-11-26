@@ -15,6 +15,7 @@ def index(req):
 def getResult(req):
     phone_id = req.body.get("phone_id")
     image_bytes = req.body.get("image")
+    print(image_bytes)
 
     image = Image.open(io.BytesIO(image_bytes))
 
