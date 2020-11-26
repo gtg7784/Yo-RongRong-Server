@@ -13,8 +13,8 @@ def index(req):
 
 @csrf_exempt
 def getResult(req):
-    phone_id = req.body.get("phone_id")
-    image_bytes = req.body.get("image")
+    phone_id = req.body["phone_id"]
+    image_bytes = req.body["image"]
     print(image_bytes)
 
     image = Image.open(io.BytesIO(image_bytes))
@@ -39,7 +39,7 @@ def getResult(req):
 
 @csrf_exempt
 def getAllProducts(req):
-    phone_id = req.body.get("phone_id")
+    phone_id = req.body["phone_id"]
     objs = Log.objects.filter(phone_id=phone_id)
 
     print(objs)
