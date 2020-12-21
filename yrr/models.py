@@ -14,7 +14,7 @@ class Img(models.Model):
 
     def __str__(self):
         return self.id
-
+       
 
 class Log(models.Model):
     id = models.CharField(max_length=200, auto_created=True, primary_key=True)
